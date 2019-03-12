@@ -35,7 +35,10 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  return {};
+  return {
+    addTodo: text => dispatch(addTodo(text)),
+    toggleComplete: id => dispatch(toggleComplete(id))
+  };
 };
 
 export default connect(

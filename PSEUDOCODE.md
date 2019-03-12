@@ -15,6 +15,8 @@ Work on the general flow
 - return todos objects for mapToState, work on map DispatchToprops later - Done
 - Work on a form by creating three relative components Form, TodoItems and TodoList - Done
 
+
+
 Validations
 When you add a new item to the todo array an action containing the new todo 
 object will be dispatched through all of the reducers.

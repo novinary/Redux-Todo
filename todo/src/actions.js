@@ -5,7 +5,7 @@ export const addTodo = (text) => ({
     payload: text
 })
 
-export const ToggleComplete = id => ({
+export const toggleComplete = id => ({
     type: TOGGLE_COMPLETE,
     payload: id
 });
