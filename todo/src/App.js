@@ -2,15 +2,14 @@ import React, { Component } from "react";
 import ReactDOM from 'react-dom';
 import "./App.css";
 import { createStore, combineReducers } from "redux";
-import Form from "./components/Form";
-import ToDos from "./components/ToDos";
+import Form from "./components/Form/Form"
 import { Provider } from "react-redux";
-import { addTodo, todo, completed } from "./state.reducers";
+import { addTodo } from "./components/State/reducers";
 
 const rootReducer = combineReducers({
-  todo,
+  //todo,
   addTodo,
-  completed,
+  //completed,
  });
 
 const store = createStore(
@@ -19,9 +18,8 @@ const store = createStore(
 );
 
 ReactDOM.render(
-  <Provider store={store}>>
+  <Provider store={store}>
     <Form />
-    <ToDos />
   </Provider>,
-   document.querySelector("#target")
+   document.querySelector("#root")
 );

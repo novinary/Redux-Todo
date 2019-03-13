@@ -1,7 +1,7 @@
-import * as types from './components/constants/actionTypes'
+import * as types from '../constants/actionTypes'
 
 // REDUCER FUNCTIONS
-function addTodo (todoArray = [], action) {
+export function addTodo (todoArray = [], action) {
     switch (action.type) {
       case types.ADD_TODO:
       return todoArray.concat(action.payload)
