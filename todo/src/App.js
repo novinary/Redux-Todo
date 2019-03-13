@@ -1,7 +1,9 @@
-import React, { Component } from "react";
-import "./App.css";
-import createStore from "redux"
-
+import React, { Component } from 'react';
+import './App.css'
+import createStore from 'redux'
+import Form from './components/Form'
+import ToDos from './components/ToDos'
+import * as types from './components/constants/actionTypes'
 
 const store = createStore(
   rootReducer,
