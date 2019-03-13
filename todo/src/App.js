@@ -1,23 +1,17 @@
 import React, { Component } from "react";
 import "./App.css";
+import createStore from "redux"
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <p>To Do List:</p>
-        </header>
-        <div>
-          <label>Add To Do</label>
-          <input type="text" value="test" />
-        </div>
-        <div className="todo-app container">
 
-        </div>
-      </div>
-    );
-  }
-}
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
-export default App;
+ReactDom.Render(
+  <Provider>
+    <Form />
+    <ToDos />
+  </Provider>
+);
+
